@@ -1,10 +1,15 @@
 import React from "react";
 
-const Calculator = () => {
+const Calculator = ({ darkMode, setDarkMode }) => {
     return (
         <div className="calculator">
             <div className="theme-toggle">
-                <input type="checkbox" name="theme" id="theme" />
+                <input
+                    onClick={() => setDarkMode(!darkMode)}
+                    type="checkbox"
+                    name="theme"
+                    id="theme"
+                />
             </div>
 
             <div className="display-clear">

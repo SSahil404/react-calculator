@@ -6,8 +6,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     display: grid;
     place-items: center;
-    height: 100vh;
-    width: 100%;
 }
 
 code {
