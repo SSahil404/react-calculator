@@ -125,11 +125,13 @@ button:hover {
     color: var(--clr-dark-secondary);
 }
 .calculator .display-clear .display .current-result {
-    height: 3rem;
+    height: 3.5rem;
     background-color: var(--clr-light);
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 0 0.5rem;
     color: var(--clr-dark);
+    display: flex;
+    flex-wrap: wrap;
 }
 .calculator .display-clear .clear {
     width: 80px;
