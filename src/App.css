@@ -118,14 +118,16 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 2rem;
+    height: 2.5rem;
+    /* overflow: auto; */
     background-color: var(--clr-light-primary);
     font-size: 1rem;
     padding: 0 0.5rem;
     color: var(--clr-dark-secondary);
 }
 .calculator .display-clear .display .current-result {
-    height: 3.5rem;
+    height: 5rem;
+    overflow: auto;
     background-color: var(--clr-light);
     font-size: 1.8rem;
     padding: 0 0.5rem;
