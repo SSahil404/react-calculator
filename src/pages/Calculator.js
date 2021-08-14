@@ -23,7 +23,7 @@ const Calculator = ({ darkMode, setDarkMode }) => {
         setEqual("");
         setComputation("");
     };
-    const appendNumber = (number) => {
+    const appendNumber = number => {
         if (computation !== "") {
             setPrevResult(result);
             setPrevOperand("");
@@ -37,7 +37,7 @@ const Calculator = ({ darkMode, setDarkMode }) => {
             setCurrOperand(currOperand.toString() + number.toString());
         }
     };
-    const chooseOperator = (currOperator) => {
+    const chooseOperator = currOperator => {
         if (currOperand === "") return;
 
         setCurrOperator(currOperator);
@@ -58,14 +58,24 @@ const Calculator = ({ darkMode, setDarkMode }) => {
         setPrevOperator(currOperator);
         setCurrOperand("");
     };
-    const equalOperator = (eq) => {
+    const equalOperator = eq => {
         if (currOperand === "" || prevOperand === "") return;
 
+        if (computation !== "") {
+            setPrevResult(result);
+            setPrevOperand("");
+            setCurrOperator("");
+            setCurrOperand("");
+            setEqual("");
+            setComputation("");
+            return;
+        }
         if (prevOperand !== "" && currOperand !== "") compute(eq);
+
         setEqual(eq);
     };
 
-    const compute = (op) => {
+    const compute = op => {
         let res;
         const prev = parseFloat(prevOperand);
         const curr = parseFloat(currOperand);
